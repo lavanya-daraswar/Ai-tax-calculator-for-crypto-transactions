@@ -7,7 +7,7 @@
 const ACTIVE_NETWORK = "sepolia";
 
 // 2. The address Remix printed when you deployed the contract
-const CONTRACT_ADDRESS = "0x0000000000000000000000000000000000000000";
+const CONTRACT_ADDRESS = "0x78A1374FB36536a7705801f4f166A8328615D158";
 
 // 3. Your backend: localhost while building, your Render URL once deployed
 const BACKEND_URL = "http://localhost:5000";
