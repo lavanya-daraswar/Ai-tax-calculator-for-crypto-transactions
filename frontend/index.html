@@ -17,7 +17,50 @@
   </header>
 
   <div id="setup-warning" class="banner hidden"></div>
+<!-- PS40 Crypto Tax Calculator -->
+<section class="card wide">
+  <h2><span class="step">5</span> CryptoTax AI</h2>
 
+  <p class="hint">
+    AI-powered crypto transaction classification and tax calculation.
+  </p>
+
+  <button id="load-demo-btn">Load Demo Transactions</button>
+<div>
+  <label for="csv-file">Import transaction CSV:</label>
+  <input type="file" id="csv-file" accept=".csv">
+</div>
+  <div id="tax-transactions"></div>
+
+  <button id="classify-btn">
+    Classify Transactions with AI
+  </button>
+
+  <div id="classification-status" class="status"></div>
+
+  <h3>Cost-Basis Method</h3>
+
+  <select id="cost-basis-method">
+    <option value="FIFO">FIFO — First In, First Out</option>
+    <option value="LIFO">LIFO — Last In, First Out</option>
+  </select>
+
+  <button id="calculate-tax-btn">
+    Calculate Gain / Loss
+  </button>
+<button id="export-tax-btn">
+  Export Tax Summary
+</button>
+  <div id="tax-summary"></div>
+<div id="tax-hash" class="status"></div>
+<button id="store-tax-hash-btn">
+  Store Tax Hash on Sepolia
+</button>
+<div id="tax-chain-status" class="status"></div>
+  <p class="disclaimer">
+    ⚠️ This tool is a hackathon prototype and is not tax advice.
+  </p>
+</section>
   <main>
     <!-- 1. Wallet -->
     <section class="card">
@@ -66,6 +109,7 @@
         <span id="check-result" class="result"></span>
       </div>
     </section>
+    <!-- PS40 - Crypto Tax Calculator -->
   </main>
 
   <footer>Built from the INNOBLOCK 2.0 starter · GCET Blockchain Club</footer>

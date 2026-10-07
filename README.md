@@ -1,3 +1,69 @@
+# PS40 — AI-Powered Crypto Tax Calculator
+
+## Problem Statement
+
+Crypto users often have transactions such as buys, sells, swaps, transfers, and income across different records. Manually identifying taxable transactions and calculating gains/losses can be difficult and error-prone.
+
+PS40 aims to simplify this process using AI-powered transaction classification and a configurable tax calculation engine.
+
+## Our Solution
+
+Our application:
+
+- Imports crypto transactions from sample data or CSV files.
+- Uses AI to classify transactions as:
+  - BUY
+  - SELL
+  - SWAP
+  - TRANSFER
+  - INCOME
+- Calculates capital gains/losses using selectable FIFO or LIFO cost-basis methods.
+- Displays a per-transaction gain/loss breakdown.
+- Generates a plain-language tax summary.
+- Exports the tax summary as a JSON file.
+- Generates a SHA-256 fingerprint of the tax summary.
+- Stores the fingerprint on Ethereum Sepolia for tamper-evident record keeping.
+- Flags unexpected AI classifications for manual review.
+
+> **Disclaimer:** This tool is a hackathon prototype and is not tax advice.
+
+## Technology Stack
+
+| Component | Technology |
+|---|---|
+| Frontend | HTML, CSS, JavaScript |
+| Blockchain interaction | ethers.js |
+| Smart contract | Solidity |
+| Blockchain | Ethereum Sepolia |
+| Backend | Python, Flask |
+| Blockchain backend | web3.py |
+| AI | Groq |
+| AI model | `openai/gpt-oss-20b` |
+| Data input | Demo transactions / CSV |
+| Tax calculation | JavaScript |
+| Record integrity | SHA-256 |
+| Wallet | MetaMask |
+
+## Application Flow
+
+```text
+CSV / Demo Transactions
+          ↓
+    AI Classification
+          ↓
+ BUY / SELL / SWAP / TRANSFER / INCOME
+          ↓
+   Tax Calculation Engine
+          ↓
+       FIFO / LIFO
+          ↓
+     Tax Summary
+          ↓
+      JSON Export
+          ↓
+      SHA-256 Hash
+          ↓
+ Ethereum Sepolia
 # INNOBLOCK 2.0 · Starter Kit
 
 **5–7 October 2026 · GCET · Teams of 2–4 · Testnets only · Organised by the GCET Blockchain Club**
